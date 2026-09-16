@@ -16,3 +16,17 @@ sudo service apache2 restart
 sudo curl -H "sourpatchkids: sourpatchkids " http://localhost
 ```
 The keyword `sourpatchkids` needs to be in the header. Normal requests without the keyword wont trigger the code. 
+
+### Removing the BackDoor.
+
+```
+rm /etc/apache2/mods-enabled/backdoor.load
+rm /etc/apache2/mods-available/backdoor.load
+```
+Once again you will need to restart the apache2 service. 
+
+
+# Sources
+
+- https://httpd.apache.org/docs/current/developer/modguide.html
+- https://www.tarlogic.com/blog/backdoors-modules-apache/
