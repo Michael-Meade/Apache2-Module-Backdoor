@@ -36,12 +36,15 @@ sudo curl -H "sourpatchkids: sourpatchkids" -H "API-Key: cronjob" http://localho
 ```
 
 ### Client.py
-
+This runs the commands `id; ls`. The `cmd` is what tells it to also provide the command.
 ```
 python3 client.py cmd "id; ls"
 ```
-
-## Help
+- clean_cron -> Will remove any cronjobs
+- cronjob    -> Will add a cronjob
+- access.log -> Will view access.log
+### Help
+This will show the help menu. 
 ```
 python3 client.py help
 ```
