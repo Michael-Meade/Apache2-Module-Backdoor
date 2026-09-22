@@ -35,6 +35,16 @@ Once again you will need to restart the apache2 service.
 sudo curl -H "sourpatchkids: sourpatchkids" -H "API-Key: cronjob" http://localhost
 ```
 
+### Client.py
+
+```
+python3 client.py cmd "id; ls"
+```
+
+## Help
+```
+python3 client.py help
+```
 # Sources
 
 - https://httpd.apache.org/docs/current/developer/modguide.html
